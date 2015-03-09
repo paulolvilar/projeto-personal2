@@ -9,46 +9,86 @@
 		</ol>
 	</div>
 </div>
-				<!-- /page header -->		
+
+<!-- /page header -->		
 <p ng-show="mensagem.texto">
 	{{mensagem.texto}}
 </p>
 
-		<div class="input-group search-bar col-sm-6">
-			<input type="text" ng-model="filtro" class="form-control" name="search" placeholder="Search...">
-		    <span class="input-group-btn">
-			    	<button class="btn btn-default" type="button" ng-click="buscaContatos()"><i class="fa fa-search"></i> Search</button>
-		    </span>
+
+
+
+<div class="main">
+
+<!-- row -->
+    <div class="row">
+
+        <!-- col 6 -->
+		<div class="col-md-12">
+
+
+
+                <!-- tile -->
+            <section class="tile color transparent-black rounded-corners">
+
+
+
+                <!-- tile header -->
+				<div class="tile-header">
+                	<!--h1><strong>Clientes</strong></h1-->
+             		<div class="input-group search-bar col-sm-6">
+						<input type="text" ng-model="filtro" class="form-control" name="search" placeholder="Search...">
+		    			<span class="input-group-btn">
+		    				<button class="btn btn-default" type="button" ng-click="buscaContatos()"><i class="fa fa-search"></i> Search</button>
+		    			</span>
+					</div>
+
+                </div>
+                <!-- /tile header -->
+
+                <!-- tile body -->
+                <div class="tile-body">
+
+
+	                <div class="table-responsive">
+	                    <table  class="table table-datatable table-custom" id="basicDataTable" ng-show="contatos.length>0">
+	                        <thead>
+	                          <tr>
+	                            <th class="sort-alpha">Nome</th>
+	                            <th class="sort-alpha">Email</th>
+								<th >Ação</th>	                            
+	                          </tr>
+	                    	</thead>
+	                    	<tbody>
+
+								<tr ng-repeat="contato in contatos">
+									<td>
+										<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
+									</td>
+									<td>{{contato.email}}</td>
+									<td>
+										<button class="btn btn-primary btn-sm" ng-click="remove(contato)">
+											Remover
+										</buttom>
+									</td>
+								</tr>
+	                    	</tbody>
+	                    </table>	
+	                </div>
+
+                  </div>
+                  <!-- /tile body -->
+
+			</section>
+                <!-- /tile -->
+
 		</div>
+        <!-- /col 6 -->
 
-
-<br />
-<p ng-show="contatos.length">
-	Clientes cadastrados: {{contatos.length}}
-</p>
-<p class="text-info" ng-hide="contatos.length">
-	Não há contatos cadastrados
-</p>
-<div class="table-responsive">
-	<table class="table table-hover">
-		<tr>
-			<th>NOME</th>
-			<th>E-MAIL</th>
-			<th>Emergência</th>
-			<th class="text-center">Ação</th>
-		</tr>
-		<tr ng-repeat="contato in contatos">
-			<td>
-				<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
-			</td>
-			<td>{{contato.email}}</td>
-			<td>{{contato.emergencia.nome}}</td>
-			<td class="text-center">
-				<button class="btn btn-warning" ng-click="remove(contato)">
-					Remover
-				</buttom>
-			</td>
-		</tr>
-	</table>
+	</div>
+		<!-- /row -->
 </div>
-<a ng-href="#/contato" class="btn btn-primary">Novo Contato</a>
+<!-- /main -->
+
+
+</div>
