@@ -1,12 +1,16 @@
 angular.module('contatooh').controller('ContatosController',function($scope, Contato) {
 	$scope.contatos = []
-	$scope.filtro = 'teste'
+	$scope.filtro = ''
 	
 	$scope.mensagem = {texto: ''}
 
 
 	$scope.buscaContatos = function () {
-		Contato.query(
+		var filtro={}
+		if ($scope.filtro.trim()!=''){
+			filtro.filter=$scope.filtro.trim()
+		}
+		Contato.query(filtro,
 			function(contatos) {
 				$scope.contatos = contatos
 				$scope.mensagem = {}
@@ -22,7 +26,7 @@ angular.module('contatooh').controller('ContatosController',function($scope, Con
 
 	$scope.remove = function(contato) {
 		Contato.delete({id: contato._id},
-			buscaContatos,
+			$scope.buscaContatos,
 			function(erro) {
 				$scope.mensagem = {
 					texto: 'Não foi possível remover o contato'
