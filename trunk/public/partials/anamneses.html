@@ -1,0 +1,95 @@
+<!-- page header -->
+<div class="pageheader">
+	<h2><i class="fa"></i> Anamneses	<span></span></h2>
+	<div class="breadcrumbs">
+		<ol class="breadcrumb">
+			<li>You are here</li>
+			<li><a href="index.html">Minimal</a></li>
+			<li class="active">Dashboard</li>
+		</ol>
+	</div>
+</div>
+
+<!-- /page header -->		
+<p ng-show="mensagem.texto">
+	{{mensagem.texto}}
+</p>
+
+
+
+
+<div class="main">
+
+<!-- row -->
+    <div class="row">
+
+        <!-- col 6 -->
+		<div class="col-md-12">
+
+
+
+                <!-- tile -->
+            <section class="tile color transparent-black rounded-corners">
+
+
+
+                <!-- tile header -->
+				<div class="tile-header">
+                	<!--h1><strong>Clientes</strong></h1-->
+             		<div class="input-group search-bar col-sm-6">
+						<input type="text" ng-model="filtro" class="form-control" name="search" placeholder="Search...">
+		    			<span class="input-group-btn">
+		    				<button class="btn btn-default" type="button" ng-click="buscaContatos()"><i class="fa fa-search"></i> Search</button>
+		    			</span>
+						<a ng-href="#/contato" class="btn btn-primary">Novo Contato</a>
+					</div>
+
+                </div>
+                <!-- /tile header -->
+
+                <!-- tile body -->
+                <div class="tile-body">
+
+
+	                <div class="table-responsive">
+	                    <table  class="table table-datatable table-custom" id="basicDataTable" ng-show="contatos.length>0">
+	                        <thead>
+	                          <tr>
+	                            <th class="sort-alpha">Nome</th>
+	                            <th class="sort-alpha">Email</th>
+								<th >Ação</th>	                            
+	                          </tr>
+	                    	</thead>
+	                    	<tbody>
+
+								<tr ng-repeat="contato in contatos">
+									<td>
+										<a ng-href="#/contato/{{contato._id}}">{{contato.nome}}</a>
+									</td>
+									<td>{{contato.email}}</td>
+									<td>
+										<button class="btn btn-primary btn-sm" ng-click="remove(contato)">
+											Remover
+										</buttom>
+									</td>
+								</tr>
+	                    	</tbody>
+	                    </table>	
+	                </div>
+
+                  </div>
+                  <!-- /tile body -->
+
+			</section>
+                <!-- /tile -->
+
+		</div>
+        <!-- /col 6 -->
+
+	</div>
+		<!-- /row -->
+</div>
+<!-- /main -->
+
+
+</div>
