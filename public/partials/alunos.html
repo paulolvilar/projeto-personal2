@@ -1,6 +1,6 @@
 <!-- page header -->
 <div class="pageheader">
-	<h2><i class="fa"></i> Clientes	<span></span></h2>
+	<h2><i class="fa"></i> Alunos	<span></span></h2>
 	<div class="breadcrumbs">
 		<ol class="breadcrumb">
 			<li>You are here</li>
@@ -36,14 +36,19 @@
                 <!-- tile header -->
 				<div class="tile-header">
                 	<!--h1><strong>Clientes</strong></h1-->
+                    <div>
+                      <p>
+                        <a ng-href="#/aluno" class="btn btn-primary">Incluir+</a>
+                      </p>
+                    </div>
+                    
+
              		<div class="input-group search-bar col-sm-6">
 						<input type="text" ng-model="filtro" class="form-control" name="search" placeholder="Search...">
 		    			<span class="input-group-btn">
 		    				<button class="btn btn-default" type="button" ng-click="buscaContatos()"><i class="fa fa-search"></i> Search</button>
 		    			</span>
-						<a ng-href="#/contato" class="btn btn-primary">Novo Contato</a>
 					</div>
-
                 </div>
                 <!-- /tile header -->
 
