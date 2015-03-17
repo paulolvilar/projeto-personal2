@@ -1,12 +1,13 @@
 
 <div class="main">
+<form class="form-horizontal" role="form" ng-submit="salva()">
 
 
-<!-- row -->
+	<!-- row -->
     <div class="row">
 
         <!-- col 6 -->
-		<div class="col-md-6">
+		<div class="col-md-4">
 
 
 
@@ -17,8 +18,14 @@
 
                   <!-- tile header -->
                   <div class="tile-header">
-                    <h1><strong>Anamnese</strong></h1>
+                    <h1><strong>Dados Basicos</strong></h1>
+                    <div class="controls">
+                      <a href="#" class="minimize"><i class="fa fa-chevron-down"></i></a>
+                      <a href="#" class="refresh"><i class="fa fa-refresh"></i></a>
+                      <a href="#" class="remove"><i class="fa fa-times"></i></a>
+                    </div>
                   </div>
+                  
                   <!-- /tile header -->
 
                   <!-- tile body -->
@@ -27,35 +34,41 @@
 						{{mensagem.texto}}
 					</p>
 
-                    <form class="form-horizontal" role="form" ng-submit="salva()">
                       
-                      <div class="form-group">
-                        <label for="nome" class="col-sm-4 control-label">Nome completo</label>
-                        <div class="col-sm-8">
-                          <input type="text" class="form-control" id="nome" name="nome" required ng-model="contato.nome" />
-                        </div>
-                      </div>
 
                       <div class="form-group">
-                        <label for="email" class="col-sm-4 control-label">E-mail</label>
+                        <label for="input07" class="col-sm-4 control-label">Aluno *</label>
+                        <div class="col-sm-8" id="selectbox">
+                          <select class="chosen-select chosen-transparent form-control" id="input07" parsley-trigger="change" parsley-required="true" parsley-error-container="#selectbox">
+                            <option value="">Selecione...</option>
+                            <option value="1">Aluno 1</option>
+                            <option value="2">Aluno 2</option>
+                            <option value="3">Aluno 3</option>
+                            <option value="4">Aluno 4</option>
+                            <option value="5">Aluno 5</option>
+                          </select>
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label for="numval" class="col-sm-4 control-label">Estatura *</label>
                         <div class="col-sm-8">
-                          <input type="e-mail" class="form-control" id="email" 	placeholder="email@exemplo.com" name="email" ng-model="contato.email" required />
+                          <input type="text" class="form-control" id="numval1" parsley-trigger="change" parsley-required="true" parsley-type="number" parsley-validation-minlength="0" placeholder="must be a number...">
                         </div>
                       </div>
 
 
-                      <div class="form-group form-footer">
-                        <div class="col-sm-offset-4 col-sm-8">
-                          <button type="submit" class="btn btn-primary">Salvar</button>
-                          <button type="reset" class="btn btn-default">Reset</button>
+                      <div class="form-group">
+                        <label for="numval" class="col-sm-4 control-label">Peso *</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="numval2" parsley-trigger="change" parsley-required="true" parsley-type="number" parsley-validation-minlength="0" placeholder="must be a number...">
                         </div>
                       </div>
 
-                    </form>
 
                   </div>
                   <!-- /tile body -->
-                  
                 
 
 
@@ -65,7 +78,288 @@
 		</div>
         <!-- /col 6 -->
 
+        <!-- col 12 -->
+		<div class="col-md-4">
+
+
+
+                <!-- tile -->
+                <section class="tile color transparent-black">
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header">
+                    <h1><strong>Alteracoes de saude dianosticadas ou relatadas.</strong></h1>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile body -->
+                  <div class="tile-body">
+                    <p ng-show="mensagem.texto">
+						{{mensagem.texto}}
+					</p>
+
+
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">SISTEMA CARDIOVASCULAR</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="relato1" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">SISTEMA RESPIRATORIO</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="relato2" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">SISTEMA MUSCULO-ESQUELETICO</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="relato3" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">SISTEMA RESPIRATORIO</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="relato4" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>                      
+
+
+
+
+                  </div>
+                  <!-- /tile body -->
+                
+
+
+			</section>
+                <!-- /tile -->
+
+		</div>
+        <!-- /col 12 -->
+
+        <!-- col 6 -->
+		<div class="col-md-4">
+
+
+
+                <!-- tile -->
+                <section class="tile color transparent-black">
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header">
+                    <h1><strong>Parametros hemodinamicos</strong></h1>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile body -->
+                  <div class="tile-body">
+                    <p ng-show="mensagem.texto">
+						{{mensagem.texto}}
+					</p>
+
+
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">P.A.S</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="param1" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">P.A.D</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="param2" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>
+
+
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">FCR = bpm</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="param3" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>
+                      
+                      
+                      <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label">FCM =</label>
+                        <div class="col-sm-8">
+                          <input type="text" class="form-control" id="param4" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                        </div>
+                      </div>                      
+
+
+
+
+                  </div>
+                  <!-- /tile body -->
+                
+
+
+			</section>
+                <!-- /tile -->
+
+		</div>
+        <!-- /col 6 -->
+
+        <!-- col 12 -->
+		<div class="col-md-12">
+
+
+
+                <!-- tile -->
+                <section class="tile color transparent-black">
+
+
+
+                  <!-- tile header -->
+                  <div class="tile-header">
+                    <h1><strong>Alteracoes de saude dianosticadas ou relatadas.</strong></h1>
+                  </div>
+                  <!-- /tile header -->
+
+                  <!-- tile body -->
+                  <div class="tile-body">
+                    <p ng-show="mensagem.texto">
+						{{mensagem.texto}}
+					</p>
+
+
+ 					 <div class="form-group">
+                        <label class="col-sm-10 control-label">1.ALGUMA VEZ UM MÉDICO LHE DISSE QUE VOCÊ TERIA UMA CONDIÇÃO CARDÍACA, OU OUTRA QUALQUER, INDICANDO QUE VOCÊ SÓ PODE FAZER EXERCÍCIO COM ACOMPANHAMENTO MÉDICO?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+                      
+					<div class="form-group">
+                        <label class="col-sm-10 control-label">2.VOCÊ SENTE DOR NO PEITO QUANDO FAZ EXERCÍCIOS?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+                      
+
+					<div class="form-group">
+                        <label class="col-sm-10 control-label">3.NO MÊS PASSADO VOCÊ TEVE DOR NO PEITO QUANDO NÃO ESTAVA PRATICANDO EXERCÍCIOS?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+
+					<div class="form-group">
+                        <label class="col-sm-10 control-label">4.VOCÊ PERDE O EQUILÍBRIO DEVIDO À TONTURAS OU TEM PERDAS DE CONSCIÊNCIA?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+
+					<div class="form-group">
+                        <label class="col-sm-10 control-label">5.VOCÊ TEM PROBLEMAS DE JUNTAS OU OSSOS QUE PODEM TER SIDO CAUSADOS POR ATIVIDADE FÍSICA?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+
+					<div class="form-group">
+                        <label class="col-sm-10 control-label">6.SEU MÉDICO ESTÁ ATUALMENTE LHE PRESCREVENDO REMÉDIOS PARA PRESSÃO ARTERIAL OU PROBLEMAS CARDÍACOS?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+
+					<div class="form-group">
+                        <label class="col-sm-10 control-label">7.VOCÊ CONHECE ALGUMA OUTRA RAZÃO PELA QUAL VOCÊ NÃO DEVERIA FAZER ATIVIDADE FÍSICA?</label>
+                        <div class="col-sm-2">
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                            <label for="optionsRadios1">Sim</label>
+                          </div>
+                          <div class="radio radio-transparent">
+                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                            <label for="optionsRadios2">Nao</label>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+                  </div>
+                  <!-- /tile body -->
+                
+
+
+			</section>
+                <!-- /tile -->
+
+		</div>
+        <!-- /col 12 -->
+
 	</div>
-		<!-- /row -->
+	<!-- /row -->
+	
+	
+
+    <div class="form-group form-footer">
+      <div class="col-sm-offset-4 col-sm-8">
+        <button type="submit" class="btn btn-primary">Salvar</button>
+        <button type="reset" class="btn btn-default">Limpar</button>
+      </div>
+    </div>
+		
+</form>
+		
 </div>
 <!-- /main -->
