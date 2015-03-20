@@ -1,4 +1,4 @@
-angular.module('contatooh').controller('ContatosController',function($scope, Contato) {
+angular.module('personal').controller('ContatosController',function($scope, Contato) {
 	$scope.contatos = []
 	$scope.filtro = ''
 	

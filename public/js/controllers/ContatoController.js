@@ -1,4 +1,4 @@
-angular.module('contatooh').controller('ContatoController',
+angular.module('personal').controller('ContatoController',
 
 function($scope, $routeParams, Contato) {
 

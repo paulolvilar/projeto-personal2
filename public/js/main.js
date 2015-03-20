@@ -1,4 +1,4 @@
-angular.module('contatooh', ['ngRoute', 'ngResource'])
+angular.module('personal', ['ngRoute', 'ngResource'])
 .config(function($routeProvider) {
 // 
 $routeProvider.when('/contatos', {
@@ -16,15 +16,18 @@ controller: 'ContatoController'
 
 // Cadastro de Aluno
 $routeProvider.when('/alunos', {
-templateUrl: 'partials/alunos.html'
+templateUrl: 'partials/alunos.html',
+controller: 'AlunosController'
 });
 	
 $routeProvider.when('/aluno/:alunoId', {
-templateUrl: 'partials/aluno.html'
+templateUrl: 'partials/aluno.html',
+controller: 'AlunoController'
 });
 
 $routeProvider.when('/aluno', {
-templateUrl: 'partials/aluno.html'
+templateUrl: 'partials/aluno.html',
+controller: 'AlunoController'
 });
 
 // Cadastro de Anamnese
