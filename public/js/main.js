@@ -32,11 +32,13 @@ controller: 'AlunoController'
 
 // Cadastro de Anamnese
 $routeProvider.when('/anamneses', {
-	templateUrl: 'partials/anamneses.html'
+	templateUrl: 'partials/anamneses.html',
+	controller: 'AlunosController'
 });
 
-$routeProvider.when('/anamnese', {
-	templateUrl: 'partials/anamnese.html'
+$routeProvider.when('/anamnese/:alunoId', {
+	templateUrl: 'partials/anamnese.html',
+	controller: 'AnamneseController'
 });
 
 
