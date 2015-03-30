@@ -36,7 +36,7 @@
 
                       
 
-                      <div class="form-group">
+                      <!--div class="form-group">
                         <label for="input07" class="col-sm-4 control-label">Aluno *</label>
                         <div class="col-sm-8" id="selectbox">
                           <select class="chosen-select chosen-transparent form-control" id="input07" parsley-trigger="change" parsley-required="true" parsley-error-container="#selectbox">
@@ -48,21 +48,21 @@
                             <option value="5">Aluno 5</option>
                           </select>
                         </div>
-                      </div>
+                      </div-->
 
 
                       <div class="form-group">
-                        <label for="numval" class="col-sm-4 control-label">Estatura *</label>
+                        <label for="estatura" class="col-sm-4 control-label">Estatura *</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="numval1" parsley-trigger="change" parsley-required="true" parsley-type="number" parsley-validation-minlength="0" placeholder="">
+                          <input type="text" class="form-control" id="estatura" name="estatura" parsley-trigger="change" parsley-required="true" parsley-type="number" parsley-validation-minlength="0" placeholder="" ng-model="anamnese.estatura" />
                         </div>
                       </div>
 
 
                       <div class="form-group">
-                        <label for="numval" class="col-sm-4 control-label">Peso *</label>
+                        <label for="peso" class="col-sm-4 control-label">Peso *</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="numval2" parsley-trigger="change" parsley-required="true" parsley-type="number" parsley-validation-minlength="0" placeholder="">
+                          <input type="text" class="form-control" id="peso" name="peso" parsley-trigger="change" parsley-required="true" parsley-type="number" parsley-validation-minlength="0" placeholder="" ng-model="anamnese.peso" />
                         </div>
                       </div>
 
@@ -102,32 +102,32 @@
 
 
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">SISTEMA CARDIOVASCULAR</label>
+                        <label for="sistemaCardiovascular" class="col-sm-4 control-label">SISTEMA CARDIOVASCULAR</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="relato1" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="sistemaCardiovascular" name="sistemaCardiovascular" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.sistemaCardiovascular" />
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">SISTEMA RESPIRATORIO</label>
+                        <label for="sistemaRespiratorio" class="col-sm-4 control-label">SISTEMA RESPIRATORIO</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="relato2" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="sistemaRespiratorio" name="sistemaRespiratorio" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.sistemaRespiratorio" />
                         </div>
                       </div>
 
 
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">SISTEMA MUSCULO-ESQUELETICO</label>
+                        <label for="sistemaMusculoEsqueletico" class="col-sm-4 control-label">SISTEMA MUSCULO-ESQUELETICO</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="relato3" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="sistemaMusculoEsqueletico" name="sistemaMusculoEsqueletico" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.sistemaMusculoEsqueletico" />
                         </div>
                       </div>
                       
                       
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">SISTEMA RESPIRATORIO</label>
+                        <label for="colunaVertebral" class="col-sm-4 control-label">COLUNA VERTEBRAL</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="relato4" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="colunaVertebral" name="colunaVertebral" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.colunaVertebral" />
                         </div>
                       </div>                      
 
@@ -169,32 +169,32 @@
 
 
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">P.A.S</label>
+                        <label for="pas" class="col-sm-4 control-label">P.A.S</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="param1" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="pas" name="pas" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.pas" />
                         </div>
                       </div>
 
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">P.A.D</label>
+                        <label for="pad" class="col-sm-4 control-label">P.A.D</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="param2" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="pad" name="pad" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.pad" />
                         </div>
                       </div>
 
 
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">FCR = bpm</label>
+                        <label for="fcr" class="col-sm-4 control-label">FCR = bpm</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="param3" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="fcr" name="fcr" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.fcr" />
                         </div>
                       </div>
                       
                       
                       <div class="form-group">
-                        <label for="fullname" class="col-sm-4 control-label">FCM =</label>
+                        <label for="fcm" class="col-sm-4 control-label">FCM =</label>
                         <div class="col-sm-8">
-                          <input type="text" class="form-control" id="param4" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1">
+                          <input type="text" class="form-control" id="fcm" name="fcm" parsley-trigger="change" parsley-required="true" parsley-minlength="4" parsley-validation-minlength="1" ng-model="anamnese.fcm" />
                         </div>
                       </div>                      
 
@@ -239,12 +239,12 @@
                         <label class="col-sm-10 control-label">1.ALGUMA VEZ UM MEDICO LHE DISSE QUE VOCE TERIA UMA CONDICAO CARDIACA, OU OUTRA QUALQUER, INDICANDO QUE VOCE SO PODE FAZER EXERCICIO COM ACOMPANHAMENTO MEDICO?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asCondCardiaca" id="asCondCardiaca1" value="sim" ng-model="anamnese.asCondCardiaca" />
+                            <label for="asCondCardiaca1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asCondCardiaca" id="asCondCardiaca2" value="nao" ng-model="anamnese.asCondCardiaca" />
+                            <label for="asCondCardiaca2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -253,12 +253,12 @@
                         <label class="col-sm-10 control-label">2.VOCE SENTE DOR NO PEITO QUANDO FAZ EXERCICIOS?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asDorPeito" id="asDorPeito1" value="sim" ng-model="anamnese.asDorPeito" />
+                            <label for="asDorPeito1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asDorPeito" id="asDorPeito2" value="nao" ng-model="anamnese.asDorPeito" />
+                            <label for="asDorPeito2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -268,12 +268,12 @@
                         <label class="col-sm-10 control-label">3.NO MES PASSADO VOCE TEVE DOR NO PEITO QUANDO NAO ESTAVA PRATICANDO EXERCICIOS?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asDorPeitoExercicio" id="asDorPeitoExercicio1" value="sim" ng-model="anamnese.asDorPeitoExercicio" />
+                            <label for="asDorPeitoExercicio1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asDorPeitoExercicio" id="asDorPeitoExercicio2" value="nao" ng-model="anamnese.asDorPeitoExercicio" />
+                            <label for="asDorPeitoExercicio2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -282,12 +282,12 @@
                         <label class="col-sm-10 control-label">4.VOCE PERDE O EQUILIBRIO DEVIDO A TONTURAS OU TEM PERDAS DE CONSCIENCIA?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asPerdeEquilibrio" id="asPerdeEquilibrio1" value="sim" ng-model="anamnese.asPerdeEquilibrio" />
+                            <label for="asPerdeEquilibrio1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asPerdeEquilibrio" id="asPerdeEquilibrio2" value="nao" ng-model="anamnese.asPerdeEquilibrio" />
+                            <label for="asPerdeEquilibrio2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -296,12 +296,12 @@
                         <label class="col-sm-10 control-label">5.VOCE TEM PROBLEMAS DE JUNTAS OU OSSOS QUE PODEM TER SIDO CAUSADOS POR ATIVIDADE FISICA?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asProblemaJuntas" id="asProblemaJuntas1" value="sim" ng-model="anamnese.asProblemaJuntas" />
+                            <label for="asProblemaJuntas1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asProblemaJuntas" id="asProblemaJuntas2" value="nao" ng-model="anamnese.asProblemaJuntas" />
+                            <label for="asProblemaJuntas2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -310,12 +310,12 @@
                         <label class="col-sm-10 control-label">6.SEU MEDICO ESTA ATUALMENTE LHE PRESCREVENDO REMEDIOS PARA PRESSAO ARTERIAL OU PROBLEMAS CARDIACOS?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asRemedioPressao" id="asRemedioPressao1" value="sim" ng-model="anamnese.asRemedioPressao" />
+                            <label for="asRemedioPressao1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asRemedioPressao" id="asRemedioPressao2" value="nao" ng-model="anamnese.asRemedioPressao" />
+                            <label for="asRemedioPressao2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -324,12 +324,12 @@
                         <label class="col-sm-10 control-label">7.VOCE CONHECE ALGUMA OUTRA RAZAO PELA QUAL VOCE NAO DEVERIA FAZER ATIVIDADE FISICA?</label>
                         <div class="col-sm-2">
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1">
-                            <label for="optionsRadios1">Sim</label>
+                            <input type="radio" name="asRazaoNaoAtividade" id="asRazaoNaoAtividade1" value="sim" ng-model="anamnese.asRazaoNaoAtividade" />
+                            <label for="asRazaoNaoAtividade1">Sim</label>
                           </div>
                           <div class="radio radio-transparent">
-                            <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-                            <label for="optionsRadios2">Nao</label>
+                            <input type="radio" name="asRazaoNaoAtividade" id="asRazaoNaoAtividade2" value="nao" ng-model="anamnese.asRazaoNaoAtividade" />
+                            <label for="asRazaoNaoAtividade2">Nao</label>
                           </div>
                         </div>
                       </div>
@@ -355,7 +355,6 @@
     <div class="form-group form-footer">
       <div class="col-sm-offset-4 col-sm-8">
         <button type="submit" class="btn btn-primary">Salvar</button>
-        <button type="reset" class="btn btn-default">Limpar</button>
       </div>
     </div>
 		
